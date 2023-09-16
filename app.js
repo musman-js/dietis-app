@@ -38,10 +38,11 @@ app.use(cors())
 // }))
 
 //show static page on / request
-app.use('/', express.static(path.join(__dirname, './web/build')));
+app.use('/', express.static(path.join(_dirname, './web/build')));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './web/build/index.html'));
+    res.sendFile(path.join(_dirname, './web/build/index.html'));
 });
+ 
 
 
 app.use('/api/v1/', resident);
